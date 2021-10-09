@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Check Extramarital affair
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+<h1>Fill in the Details</h1>
+<div class="full_form">
+    <p>Carefully read all these things and then proceed</p>
+    <p>
+    rate_marriage: How rate marriage, 1 = very poor, 2 = poor, 3 = fair,
+                    4 = good, 5 = very good<br>
+    age: Age of lady<br>
+    yrs_married: No. years married<br>
+    children: No. children<br>
+    religious: How relgious, 1 = not, 2 = mildly, 3 = fairly,
+                    4 = strongly<br>
+    educ: Level of education, 9 = grade school, 12 = high
+                    school, 14 = some college, 16 = college graduate,
+                    17 = some graduate school, 20 = advanced degree<br>
+    occupation      : 1 = student, 2 = farming, agriculture; semi-skilled,
+                    or unskilled worker; 3 = white-colloar; 4 = teacher
+                    counselor social worker, nurse; artist, writers;
+                    technician, skilled worker, 5 = managerial,
+                    administrative, business, 6 = professional with
+                    advanced degree<br>
+    occupation_husb : Husband's occupation. Same as occupation<br>
+    </p>
+
+
+</div>
+<div class="container">
+    <form action="/prediction" method="POST">
+        <input type="text" name="input1" placeholder="Enter Rating of Marriage" required="required">
+        <input type="text" name="input2" placeholder="Enter Age" required="required">
+        <input type="text" name="input3" placeholder="Enter yrs_married	" required="required">
+        <input type="text" name="input4" placeholder="Enter children" required="required">
+        <input type="text" name="input5" placeholder="Enter religious" required="required">
+        <input type="text" name="input6" placeholder="Enter education" required="required">
+        <input type="text" name="input7" placeholder="Enter occupation" required="required">
+        <input type="text" name="input8" placeholder="Enter occupation_husb" required="required">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
